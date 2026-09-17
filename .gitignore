@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+store.db
+.runtime_state.json
+.runtime_state.json.tmp
+
+.venv/
+venv/
+
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+
+data_layer/data process/maps/
+data_layer/data process/_*.py
+local_samples/
+local_test_logs/
+/N.E.K.O/
