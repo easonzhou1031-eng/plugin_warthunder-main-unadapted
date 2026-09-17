@@ -1,11 +1,11 @@
 # neko_warthunder
 
-War Thunder 猫娘副驾驶插件 v1。插件只消费本地数据层 HTTP `:8112`，把连续遥测整理成 Battle Awareness 事件，再经 Scenario / Arbiter / Safety / Dispatcher 决定是否让猫娘开口。
+War Thunder 副驾驶插件 v1。插件只消费本地数据层 HTTP `:8112`，把连续遥测整理成 Battle Awareness 事件，再经 Scenario / Arbiter / Safety / Dispatcher 决定是否开口。是从project neko适配下来的
 
 ## 兼容性
 
 - 插件 SDK：`>=0.1.0,<0.3.0`，推荐 `>=0.1.0,<0.2.0`。
-- N.E.K.O 宿主：面板使用 Hosted TSX UI，需要 N.E.K.O `v0.8.0` 或更新版本。
+- 宿主：面板使用 Hosted TSX UI，需要后续会改
 - 显示环境：支持浅色/深色主题、桌面窗口、窄窗口和低高度窗口；主内容独立滚动，底部播报控制不会覆盖内容。
 - 当前面板以简体中文为主要操作语言；插件名称与简介已提供 8 个宿主 locale，完整面板国际化不属于本轮范围。
 
@@ -169,9 +169,7 @@ uv run python launcher.py
 ```powershell
 Invoke-RestMethod -Method Post http://127.0.0.1:48916/plugins/refresh
 Invoke-RestMethod -Method Post http://127.0.0.1:48916/plugin/neko_warthunder/start
-```
-
-若 `plugins/refresh` 看到 `neko_warthunder_1`，或把 `project-N-E-K-O-Warthunder-8111-data-plugin` 当成另一份插件，先检查 junction 与启动环境，不要继续真机测试。运行态烟测通过的判据是：只启动 `neko_warthunder`，Hosted UI context 返回 `state_empty=false`，actions 可见，且 `dry_run=true` 时 `test_say` 返回 `pushed=false, blocked="dry_run"`。
+``
 
 ## 目录
 
